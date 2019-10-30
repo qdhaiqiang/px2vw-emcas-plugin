@@ -24,13 +24,13 @@ Now，you added a shortcut key to emacs, if it is inconvenient, you can set `F9`
 use `C-c w` shortcur key in "200px" char, it will auto convert to
 ```
 .div {
-    width: 13.89vw;
+    width: 13.8889vw;
 }
 ```
 
 ## Explaintin
 
-The vw value is convert by expression (/ (* px 100) viewport-width) and retain two float point.
+The vw value is convert by expression (/ (* px 100) viewport-width) and maintain four float points.
 
 ## Remind
 

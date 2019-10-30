@@ -1,5 +1,6 @@
 
 (defvar viewpoint-width 1440) 
+(defvar viewpoint-height 900) 
 
 (defun kill-thing-at-point (thing)
   "Kill the `thing-at-point' for the specified kind of THING."
@@ -17,7 +18,7 @@
   (format "%.2f" (/ (float (* (string-to-number px-v) 100)) viewpoint-width)))
 
 (defun convert-to-vh (px-v)
-  (format "%.2f" (/ (float (* (string-to-number px-v) 100)) 900 )))
+  (format "%.2f" (/ (float (* (string-to-number px-v) 100)) viewpoint-height )))
 
 (defun px->vw ()
   "Convert word at point (or selected region) from px to vw."

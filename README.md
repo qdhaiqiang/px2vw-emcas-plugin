@@ -3,7 +3,7 @@ This is a emcas plugin to convert px unit to vw or vh in css or other files.
 
 ## How to use
 
-* Download the [px2vw.el](https://github.com/qdhaiqiang/emcas-plugin-px2vw/blob/master/px2vw.el) file to your emcas elisp configuration directory, generally it is `~/.emcas.d/lisp/` in MacOS. Or copy the content of `px-2vw.el` to a `.el` file in emcas el config path, and i suggest to also named `px2vw.el`.
+* Download the [px2vw.el](https://github.com/qdhaiqiang/px2vw-emcas-plugin/blob/master/px2vw.el) file to your emcas elisp configuration directory, generally it is `~/.emcas.d/lisp/` in MacOS. Or copy the content of `px-2vw.el` to a `.el` file in emcas el config path, and i suggest to also named `px2vw.el`.
 
 * Add blow code to your emcas config file, `~/.emcas.d/init.el` or `~/.emcas.d/custom.el` are ok.
 ```

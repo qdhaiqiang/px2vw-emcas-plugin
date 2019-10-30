@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>README.html</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+</head>
+
+<body>
+
+<h2 id="introduction">Introduction</h2>
+<p>This is a emcas plugin to convert px unit to vw or vh in css or other files.</p>
+<h2 id="how-to-use">How to use</h2>
+<ul>
+<li><p>Download the <a href="https://github.com/qdhaiqiang/emcas-plugin-px-to-vw-vh/blob/master/px-to-vw-vh.el">px-to-vw-vh.el</a> file to your emcas elisp configuration directory, generally it is <code>~/.emcas.d/lisp/</code> in MacOS. Or copy the content of <code>px-to-vw-vh.el</code> to a <code>.el</code> file in emcas el config path, and i suggest to also named <code>px-to-vw-vh.el</code>.</p></li>
+<li><p>Add blow code to your emcas config file, <code>~/.emcas.d/init.el</code> or <code>~/.emcas.d/custom.el</code> are ok.</p></li>
+</ul>
+<pre><code>(require &#39;px-to-vw-vh)
+(global-set-key (kbd &quot;C-c w&quot;) &#39;px-&gt;vw)</code></pre>
+<p>Now，you added a shortcut key to emacs, if it is inconvenient, you can set <code>F9</code> to do this.</p>
+<pre><code>(global-set-key [f9] &#39;px-&gt;vw)</code></pre>
+<ul>
+<li>Move point to width number with “px” unit, and press shortcut key <code>C-c w</code>, px unit will convert to vw. For example:</li>
+</ul>
+<pre><code>.div {
+    width: 200px;
+}</code></pre>
+<p>use <code>C-c w</code> shortcur key in “200px” char, it will auto convert to</p>
+<pre><code>.div {
+    width: 13.89vw;
+}</code></pre>
+<h2 id="explaintin">Explaintin</h2>
+<p>The vw value is convert by expression (/ (* px 100) viewport-width) and retain two float point.</p>
+<h2 id="remind">Remind</h2>
+<p>I gived default width of viewport is 1440, and not support to change by param, so if you want to change, please modify the first line constant of <code>px-to-vw-vh.el</code>.</p>
+
+</body>
+</html>

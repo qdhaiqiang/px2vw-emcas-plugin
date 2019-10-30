@@ -37,4 +37,4 @@
 
 ;;(global-set-key (kbd "C-c w") 'px->vw)
 ;;(global-set-key [f9] 'px->vw)
-(provide 'px-to-vw-vh)
+(provide 'px2vw)

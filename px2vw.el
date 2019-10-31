@@ -1,7 +1,9 @@
 ;;; px2vw.el --- convert px to vw in css
 ;;; Commentary:
 ;;; Code:
- 
+
+(defvar viewpoint-width 1440.0)
+
 (defun region-px->vw (pos1 pos2)
   "当前选中region或者paragraph中的px转化为vw，可能还需要考虑:
    1. 1px的情况
@@ -18,10 +20,10 @@
       (let* ((px-digit-str (match-string 1))
              (px-digit (string-to-number px-digit-str))
              (vw-digit (format
-                        "%.2f"
+                        "%.4f"
                         (/
                          (* 100.0 px-digit)
-                         1440.0))))
+                         viewpoint-width))))
         (replace-match (concat vw-digit  "vw") t nil)))))
  
 ;;(global-set-key (kbd "C-c w") 'px->vw)

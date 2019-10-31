@@ -28,6 +28,8 @@ use `C-c w` shortcur key in "200px" chars, it will auto convert to
 }
 ```
 
+![show](px2vw.gif)
+
 ## Explaintin
 
 The vw value is convert by expression (/ (* px 100) viewport-width) and maintain four float points.
@@ -35,7 +37,7 @@ The vw value is convert by expression (/ (* px 100) viewport-width) and maintain
 ## Remind
 
 1. I gived default width of viewport is 1440, and not support to change by param, so if you want to change, please modify value of the first line constant `viewpoint-width` in `px2vw.el`.
-2. Not support convert all px values at a time.
+
 
 ## Refer
 [李杀的Elisp学习笔记](https://emacsist.github.io/2018/01/03/%E6%9D%8E%E6%9D%80%E7%9A%84elisp%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/)

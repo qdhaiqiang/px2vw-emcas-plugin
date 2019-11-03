@@ -8,11 +8,11 @@ This is a emcas plugin to convert px unit to vw or vh in css or other files.
 * Add blow code to your emcas config file, `~/.emcas.d/init.el` or `~/.emcas.d/custom.el` are ok.
 ```
 (require 'px2vw)
-(global-set-key (kbd "C-c w") 'px->vw)
+(global-set-key (kbd "C-c w") 'region-px->vw)
 ```
 Now，you added a shortcut key to emacs, if it is inconvenient, you can set `F9` to do this.
 ```
-(global-set-key [f9] 'px->vw)
+(global-set-key [f9] 'region-px->vw)
 ```
 
 * Move point to width number with "px" unit, and press shortcut key `C-c w`, px unit will convert to vw. For example:
